@@ -1,0 +1,34 @@
+
+---
+Files: [src/fakeactors.S, src/fakeactors.cpp]
+Hooks:
+  - type: branch
+    instr: b
+    addr: F37B4F0
+    func: fakeGhostBox
+
+  - type: branch
+    instr: bl
+    addr: F31362C
+    func: fakeStarCoin
+
+  - type: branch
+    instr: bl
+    addr: F431BF0
+    func: fakeCoinRing
+
+  - type: branch
+    instr: bl
+    addr: F2E8F48
+    func: fakeCheckpoint
+
+  - type: branch
+    instr: bl
+    addr: F341268
+    func: fakeFlagPole
+
+  - type: branch
+    instr: bl
+    addr: F44BE10
+    func: fakeSwitch
+

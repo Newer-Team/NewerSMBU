@@ -1,0 +1,7 @@
+
+---
+Name: Loader
+SplitSections: false
+SymTable: loader.x
+BuildHeader: true
+Modules: [loader.yaml]

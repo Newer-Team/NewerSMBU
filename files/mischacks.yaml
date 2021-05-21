@@ -1,0 +1,33 @@
+
+---
+Files: [src/mischacks.S, src/mischacks.cpp]
+Hooks:
+  - type: branch
+    instr: bl
+    addr: F340F20
+    func: jumpOverFlagPole
+
+  - type: branch
+    instr: bl
+    addr: F340ECC
+    func: noOneUpFlagPole
+  
+  - type: branch
+    instr: bl
+    addr: F5D61B0
+    func: prepareDecomp
+  
+  - type: branch
+    instr: bl
+    addr: F5D61B4
+    func: decompZlib__FPUcUiT1T2PQ2_4sead4Heap
+    
+  - type: branch
+    instr: bl
+    addr: EBC1104
+    func: StageActor_verticalWrap
+    
+  - type: branch
+    instr: bl
+    addr: F245248
+    func: TileColl_verticalWrap

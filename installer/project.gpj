@@ -1,0 +1,15 @@
+#!gbuild
+primaryTarget=ppc_standalone.tgt
+[Project]
+	-bsp generic
+	-cpu=espresso
+	-object_dir=objs
+	-Ogeneral
+	--g++
+	--no_rtti
+	-DREGION_Kinnay
+	-DCODE_ADDR=0xf800000
+	-DDATA_ADDR=0x10400000
+	-I../include
+src/entrypoint.S
+src/installer.cpp

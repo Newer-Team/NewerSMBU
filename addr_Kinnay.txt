@@ -1,0 +1,9 @@
+
+text = 0
+data = 0
+-SAVEOpenFile = 0x0F77FC28
+-newertext = 0x0F800000
+-newerdata = 0x10400000
+-globals = 0x103F0000
+
+EBC0000 - 20000000: Addr + 0

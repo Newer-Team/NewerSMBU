@@ -1,0 +1,59 @@
+
+---
+Files: [src/groundmask.cpp, src/groundmask.S]
+Hooks:
+  #Patch the amount of bytes allocated for BgRenderer (0x18094)
+  - type: patch
+    addr: F24F4F6
+    data: "0002"
+  - type: patch
+    addr: F24F4FE
+    data: "8094"
+
+  - type: branch
+    instr: bl
+    addr: F24F52C
+    func: __ct__15NewerBgRendererFv
+
+  - type: branch
+    instr: bl
+    addr: F07E254
+    func: init__15NewerBgRendererFPQ2_4sead4Heap
+  
+  #Initializes the shader input blocks (uniform and sampler)
+  - type: branch
+    instr: bl
+    addr: F0BE39C
+    func: initShaders__15NewerBgRendererSFPQ2_3agl20ShaderProgramArchivePQ2_4sead4Heap
+    
+  - type: branch
+    instr: bl
+    addr: F073E60
+    func: initMainLayerFrameBuffer__15NewerBgRendererFPQ3_3agl3lyr10RenderInfo
+  
+  - type: branch
+    instr: bl
+    addr: F07406C
+    func: renderMainLayer__15NewerBgRendererFPQ3_3agl3lyr10RenderInfo
+  
+  #The original renderMainLayer function
+  - type: nop
+    addr: F0741D4
+  
+  - type: branch
+    instr: bl
+    addr: F073F40
+    func: revealMaskRenderStep__15NewerBgRendererFPQ3_3agl3lyr10RenderInfo
+    
+  #We're using the function that draws layer 0 tiles with spotlight masks
+  #to draw layer 1 tiles with reveal masks. To do this, we're replacing the
+  #layer and mask texture data pointers by our own. This function frees those
+  #textures however. Since we're not allocating our texture data with
+  #agl::utl::DynamicTextureAllocator we don't want to free it.
+  - type: nop
+    addr: F252794
+    
+  - type: branch
+    instr: bl
+    addr: F25279C
+    func: freeLayerMaskTexData

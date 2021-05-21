@@ -1,0 +1,37 @@
+
+---
+Files: [src/yoshi.cpp, src/yoshi.S]
+Hooks:
+  - type: patch
+    addr: F51DFB6
+    data: "2924"
+
+  - type: branch
+    instr: bl
+    addr: F526F38
+    func: flutterEnd
+
+  - type: branch
+    instr: bl
+    addr: F522A3C
+    func: yoshiEatActor
+
+  - type: branch
+    instr: bl
+    addr: F527B90
+    func: yoshiColorPatch
+
+  - type: branch
+    instr: bl
+    addr: F527044
+    func: land__10NewerYoshiFv
+
+  - type: branch
+    instr: bl
+    addr: F526FA0
+    func: flutterEnd
+
+  - type: funcptr
+    addr: 10673D74
+    func: onCreate___10NewerYoshiFv
+

@@ -1,0 +1,46 @@
+#!gbuild
+primaryTarget=ppc_standalone.tgt
+[Project]
+	-bsp generic
+	-cpu=espresso
+	-object_dir=objs
+	-Ogeneral
+	--g++
+	--no_rtti
+	-DREGION_Kinnay
+	-DCODE_ADDR=0xf800000
+	-DDATA_ADDR=0x10400000
+	-I../include
+src/actorspawner.cpp
+src/effectspawner.cpp
+src/jumpbros.cpp
+src/masksprite.cpp
+src/magicplatform.cpp
+src/objectmask.cpp
+src/parabeetlecoin.cpp
+src/specialevent.cpp
+src/spinningstar.cpp
+src/switchblock.cpp
+src/switchblock.S
+src/tripleblock.cpp
+src/waveplatform.cpp
+src/windactor.cpp
+src/deathfoo.S
+src/fakeactors.S
+src/fakeactors.cpp
+src/groundmask.cpp
+src/groundmask.S
+src/mischacks.S
+src/mischacks.cpp
+src/neweru.cpp
+src/ctors.cpp
+src/specialphysics.S
+src/specialphysics.cpp
+src/tileanims.cpp
+src/tileanims.S
+src/tilegodhax.S
+src/tilegodhax.cpp
+src/waves.S
+src/waves.cpp
+src/yoshi.cpp
+src/yoshi.S

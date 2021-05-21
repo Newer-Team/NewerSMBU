@@ -1,0 +1,16 @@
+
+---
+Name: NewerU Project
+SymTable: neweru.ld
+Modules:
+  - customsprites.yaml
+  - deathfoo.yaml
+  - fakeactors.yaml
+  - groundmask.yaml
+  - mischacks.yaml
+  - neweru.yaml
+  - specialphysics.yaml
+  - tileanims.yaml
+  - tilegodhax.yaml
+  - waves.yaml
+  - yoshi.yaml

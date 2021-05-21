@@ -1,0 +1,39 @@
+
+---
+Files: [src/specialphysics.S, src/specialphysics.cpp]
+Hooks:
+  - type: branch
+    instr: bl
+    addr: F4CA500
+    func: groundPoundSpeedPatch3
+
+  - type: branch
+    instr: bl
+    addr: F4CA278
+    func: groundPoundSpeedPatch2
+
+  - type: branch
+    instr: bl
+    addr: F50A650
+    func: spinJumpSpeedPatch
+
+  - type: branch
+    instr: bl
+    addr: F5006B0
+    func: jumpSpeedPatch
+
+  - type: branch
+    instr: bl
+    addr: F4CA1D8
+    func: groundPoundSpeedPatch1
+
+  - type: branch
+    instr: bl
+    addr: F4E51B4
+    func: gravityFloatPatch
+
+  - type: branch
+    instr: bl
+    addr: F519A4C
+    func: wallJumpSpeedPatch
+

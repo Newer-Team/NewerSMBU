@@ -1,0 +1,23 @@
+
+---
+Files:
+  - src/actorspawner.cpp
+  - src/effectspawner.cpp
+  - src/jumpbros.cpp
+  - src/masksprite.cpp
+  - src/magicplatform.cpp
+  - src/objectmask.cpp
+  - src/parabeetlecoin.cpp
+  - src/specialevent.cpp
+  - src/spinningstar.cpp
+  - src/switchblock.cpp
+  - src/switchblock.S
+  - src/tripleblock.cpp
+  - src/waveplatform.cpp
+  - src/windactor.cpp
+
+Hooks:
+  - type: branch
+    instr: bl
+    addr: F4FF36C
+    func: handleJumpSwitch

@@ -1,0 +1,9 @@
+
+---
+Files: [src/tilegodhax.S, src/tilegodhax.cpp]
+Hooks:
+  - type: branch
+    instr: bl
+    addr: F2E5B18
+    func: tileGodHacks
+

@@ -1,0 +1,153 @@
+
+StickHoldMask:
+	0b0001: Up
+	0b0010: Down
+	0b0100: Left
+	0b1000: Right
+
+sead::CafeVPADDevice:
+	0x0000 0001: Sync
+	0x0000 0002: Power
+	0x0000 0004: -
+	0x0000 0008: +
+	0x0000 0010: R
+	0x0000 0020: L
+	0x0000 0040: ZR
+	0x0000 0080: ZL
+	0x0000 0100: Down
+	0x0000 0200: Up
+	0x0000 0400: Right
+	0x0000 0800: Left
+	0x0000 1000: Y
+	0x0000 2000: X
+	0x0000 4000: B
+	0x0000 8000: A
+	0x0001 0000: TV
+	0x0002 0000: Right Stick
+	0x0004 0000: Left Stick
+	0x0008 0000: ???
+	0x0010 0000: ???
+	0x0020 0000: ???
+	0x0040 0000: ???
+	0x0080 0000: Right Stick - Down
+	0x0100 0000: Right Stick - Up
+	0x0200 0000: Right Stick - Right
+	0x0400 0000: Right Stick - Left
+	0x0800 0000: Left Stick - Down
+	0x1000 0000: Left Stick - Up
+	0x2000 0000: Left Stick - Right
+	0x4000 0000: Left Stick - Left
+	0x8000 0000: ???
+
+sead::CafeDRCController
+	0x0001: A
+	0x0002: B
+	0x0004: ZL
+	0x0008: X
+	0x0010: Y
+	0x0020: ZR
+	0x0040: Stick R
+	0x0080: Stick L
+	0x0100: Power
+	0x0200: -
+	0x0400: +
+	0x0800: +
+	0x1000: -
+	0x2000: L
+	0x4000: R
+	0x8000: Pointer
+	
+	0x1.0000: Up
+	0x2.0000: Down
+	0x4.0000: Left
+	0x8.0000: Right
+	
+	0x10.0000: Stick L Up
+	0x20.0000: Stick L Down
+	0x40.0000: Stick L Left
+	0x80.0000: Stick L Right
+	
+	0x100.0000: Stick R Up
+	0x200.0000: Stick R Down
+	0x400.0000: Stick R Left
+	0x800.0000: Stick R Right
+	
+GamePad Controller Map 1:
+	0x0001: L
+	0x0002: R
+	0x0008: ZL | ZR | L | R
+	0x0010: X | Y
+	0x0020: ZL | ZR | L | R
+	0x0040: A | B
+	0x0080: X | Y
+	0x0100: Power
+	0x0200: -
+	0x0400: +
+	0x0800: A
+	0x1000: B
+	0x8000: 0
+	
+	0x1.0000: Up | Stick L Up
+	0x2.0000: Down | Stick L Down
+	0x4.0000: Left | Stick L Left
+	0x8.0000: Right | Stick L Right
+	
+GamePad Controller Map 2:
+	0x0001: L
+	0x0002: R
+	0x0008: ZL | ZR | L | R
+	0x0010: B | Y
+	0x0020: ZL | ZR | L | R
+	0x0040: A | X
+	0x0080: B | Y
+	0x0100: Power
+	0x0200: -
+	0x0400: +
+	0x0800: A
+	0x1000: B
+	0x8000: 0
+	
+	0x1.0000: Up | Stick L Up
+	0x2.0000: Down | Stick L Down
+	0x4.0000: Left | Stick L Left
+	0x8.0000: Right | Stick L Right
+
+GameController:
+	0x0001: (L)?
+	0x0002: (R)?
+	0x0008: Spin / Pick Up
+	0x0010: Run / Fire / Hold
+	0x0020: Spin / Pick Up
+	0x0040: Jump
+	0x0080: Run / Fire / Hold
+	0x0100: Power
+	0x0200: Pause (-)
+	0x0400: Pause (+)
+	0x0800: Confirm
+	0x1000: Cancel
+	0x8000: 0
+	
+	0x1.0000: Up
+	0x2.0000: Down
+	0x4.0000: Left
+	0x8.0000: Right
+
+ControllerWrapper:
+	0x0001: Jump
+	0x0002: Run / Fire / Hold
+	0x0004: Run / Fire / Hold
+	0x0008: Spin / Pick Up
+	0x0010: Up
+	0x0020: Down
+	0x0040: Left
+	0x0080: Right
+	0x0100: (L)?
+	0x0200: (R)?
+	0x0400: Pause (-)
+	0x0800: Pause (+)
+	0x1000: 0
+	0x2000: Confirm
+	0x4000: Cancel
+	0x8000: Power
+	
+	0x1.0000: Spin / Pick Up

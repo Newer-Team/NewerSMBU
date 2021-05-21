@@ -1,0 +1,44 @@
+
+---
+Files: [src/deathfoo.S]
+Hooks:
+  - type: branch
+    instr: bl
+    addr: EEC011C
+    func: fooCloudUpdate
+
+  - type: branch
+    instr: bl
+    addr: EEBAD38
+    func: fooCloudColorDark
+
+  - type: branch
+    instr: bl
+    addr: EF74F4C
+    func: fooCloudType_onCreate
+
+  - type: branch
+    instr: bl
+    addr: EEBAE50
+    func: fooCloudColorDark
+
+  - type: branch
+    instr: bl
+    addr: EEBBBD8
+    func: fooCloudColorLight
+
+  - type: branch
+    instr: bl
+    addr: EEBBA68
+    func: deathFooCollision
+
+  - type: branch
+    instr: bl
+    addr: EEBA520
+    func: fooCloudTexture
+
+  - type: branch
+    instr: bl
+    addr: EF75B5C
+    func: fooCloudType_breathIn
+

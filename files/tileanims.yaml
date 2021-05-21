@@ -1,0 +1,37 @@
+
+---
+Files: [src/tileanims.cpp, src/tileanims.S]
+Hooks:
+  - type: patch
+    addr: F254D20
+    data: "60000000"
+
+  - type: patch
+    addr: F25390A
+    data: "1038"
+
+  - type: branch
+    instr: b
+    addr: F254A0C
+    func: renderTileAnimPatch2
+
+  - type: branch
+    instr: bl
+    addr: F076054
+    func: loadTilesets__13NewerBgTexMgrFUc
+
+  - type: branch
+    instr: bl
+    addr: F254CF4
+    func: updateBGPatch
+
+  - type: branch
+    instr: bl
+    addr: F254988
+    func: renderTileAnimPatch1
+
+  - type: branch
+    instr: bl
+    addr: F077518
+    func: update__13NewerBgTexMgrFv
+

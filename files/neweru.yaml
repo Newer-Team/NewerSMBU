@@ -1,0 +1,9 @@
+
+---
+Files: [src/neweru.cpp, src/ctors.cpp]
+Hooks:
+  - type: branch
+    instr: b
+    addr: F6BA450
+    func: callNewerUCtors__Fv
+

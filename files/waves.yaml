@@ -1,0 +1,73 @@
+
+---
+Files: [src/waves.S, src/waves.cpp]
+Hooks:
+  - type: patch
+    addr: F479158
+    data: "60000000"
+
+  - type: branch
+    instr: b
+    addr: F2B93F4
+    func: updateWavePlatforms__Fv
+
+  - type: branch
+    instr: b
+    addr: F2B666C
+    func: updateWaveEvents__11NewerPoisonFv
+
+  - type: branch
+    instr: b
+    addr: F2B6668
+    func: updateWavePlatforms__Fv
+
+  - type: branch
+    instr: b
+    addr: F2B4B70
+    func: updateWavePlatforms__Fv
+
+  - type: branch
+    instr: bl
+    addr: F479060
+    func: updateWaterWaves
+
+  - type: branch
+    instr: bl
+    addr: F2B9410
+    func: updateWaveEvents__10NewerWaterFv
+
+  - type: branch
+    instr: bl
+    addr: ED4F150
+    func: waterWaveCollision
+
+  - type: branch
+    instr: bl
+    addr: F2B92B0
+    func: initWaterWaves
+
+  - type: branch
+    instr: bl
+    addr: ED4F884
+    func: waterWaveCollision2
+
+  - type: branch
+    instr: bl
+    addr: F2B7D5C
+    func: allocEventWaves
+
+  - type: branch
+    instr: bl
+    addr: F2B603C
+    func: allocEventWaves
+
+  - type: branch
+    instr: bl
+    addr: F2B659C
+    func: initWaterWaves
+    
+  #Disable a check that made the ripple
+  #effect only appear in troughs
+  - type: nop
+    addr: F478068
+

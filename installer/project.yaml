@@ -1,0 +1,6 @@
+
+---
+Name: Installer
+SplitSections: false
+SymTable: installer.x
+Modules: [installer.yaml]
