@@ -28,7 +28,7 @@ Copyright (c) 2021 Newer Team
 
 For one, the NewerU code hacks are all in the `files` folder. This uses a very NewerSMBW-like patching system, with the accursed yamls and all.
 
-Naturally, there are symbol maps and headers used by NewerU's code. These could be helpful to others who would like to mod the game! 
+Naturally, there are symbol maps and headers used by NewerU's code. These could be helpful to others who would like to mod the game! It is recommended to use headers from [this repository](https://github.com/shibbo/NSMBU-Headers/) instead, though, as they are being maintained and updated past what was done for Newer U.
 
 The source code itself includes many features, some of which ported from Newer Wii (ex. random Yoshi colours, magic platforms); and many things new to Newer U, like water waves, triple ? blocks, a "only show tiles when you get close" feature, and even a couple custom enemies.
 
