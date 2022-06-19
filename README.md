@@ -1,4 +1,4 @@
-# Newer Super Mario Bros. U
+# NEWER Super Mario Bros. U
 ## Source Code
 
 ### Preamble
